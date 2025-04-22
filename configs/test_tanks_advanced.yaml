@@ -1,4 +1,4 @@
-output_dir: "exps/test_tanks_advanced"
+output_dir: "/content/drive/MyDrive/MVS/GBi-Net/output_attack"
 true_gpu: "2"
 gpu: [0]
 random_seed: 0
@@ -9,7 +9,7 @@ model_name: "GBiNet"
 test_func_name: "test_model_stage_profile"
 dataset: "general_eval"
 max_depth: 8
-model_path: "checkpoints/blended.ckpt"
+model_path: "/content/drive/MyDrive/MVS/GBi-Net/dtu.ckpt"
 data_name: "tanks"
 img_mean: [0.5, 0.5, 0.5]
 img_std: [0.5, 0.5, 0.5]
@@ -44,9 +44,9 @@ test:
   test_metric: "thres2mm_accu"
 
 data:
-  num_workers: 4
+  num_workers: 2
   test:
-    root_dir: "data/tankandtemples/advanced"
+    root_dir: "/content/drive/MyDrive/MVS/tankandtemples/advanced"
     num_view: 7
     interval_scale: 1.0 # disabled for advanced
     num_depth: 256 # disabled for advanced
@@ -74,7 +74,7 @@ fusion:
     global_pair: False
     para_num: 1
     para_tag: [0]
-    output_dir: "exps/test_tanks_advanced/xy_filter"
+    output_dir: "/content/drive/MyDrive/MVS/GBi-Net/output_attack/ply"
     Family:
       prob_threshold: [0.85]
       num_consistent: [5]
